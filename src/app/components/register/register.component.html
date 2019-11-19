@@ -1,0 +1,43 @@
+<div class="card" style="width: 25rem;">
+    <div class="card-header">
+        Calcular
+      </div>
+    <div class="card-body">
+        <p>Nombre del dato</p>
+        <input type="text" placeholder="Ej: Agosto" [(ngModel)]="Dnombre">
+        <p>Valor del dato</p>
+        <input type="number" placeholder="Ej: 219" [(ngModel)]="Dvalor">
+        <div class="btn-group mt-2">
+          <button class="btn btn-primary" (click)="Agregar()">Agregar</button>
+          <button class="btn btn-primary" (click)="Resetear()">Resetear</button>
+          <button class="btn btn-primary" (click)="Calcular()">Calcular</button>
+          <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+              Tabla
+          </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-5"></div>
+  
+<div id="collapseExample" style="width: 25rem;" [ngbCollapse]="isCollapsed">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Datos</th>
+      <th scope="col">Valor</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let Dato of Lista; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ Dato.nombre }}</td>
+      <td>{{ Dato.valor }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+

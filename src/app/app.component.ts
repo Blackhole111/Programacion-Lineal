@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {RegisterComponent} from './components/register/register.component';
+import {ResultsComponent} from './components/results/results.component';
 
 @Component({
   selector: 'app-root',
