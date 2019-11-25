@@ -3,7 +3,7 @@
         Resultado
       </div>
     <div class="card-body">
-        <p>RD${{Resultado}}.00</p>
-        <p></p>
+        <p *ngIf="resltado != null">RD${{resltado}}</p>
+        <p *ngIf="resltado == null">RD$0.00</p>
     </div>
   </div>

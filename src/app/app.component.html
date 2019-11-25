@@ -8,10 +8,11 @@
 
 <div class="row mt-5">
   <div class="col-md-6" style="align-self: center;">
-    <app-register></app-register>
+    <app-register (rest)="resltado=($event)"></app-register>
+    <!-- <app-register (rest)="recibir($event)"></app-register> -->
   </div>
   <div class="col-md-6" style="text-align: center;">
-    <app-results></app-results>
+    <app-results [resltado]="resltado"></app-results>
   </div>
 </div>
 

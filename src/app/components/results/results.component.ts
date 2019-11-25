@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {RegisterComponent} from '../register/register.component';
 
 @Component({
@@ -8,12 +8,14 @@ import {RegisterComponent} from '../register/register.component';
 })
 export class ResultsComponent implements OnInit {
 
+  @Input() resltado;
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  Resultado = 0;
+  Resultado;
 
 
 }
